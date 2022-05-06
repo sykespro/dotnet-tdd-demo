@@ -10,6 +10,14 @@
 	</ItemGroup>
 	<Copy SourceFiles="@(_CustomFiles)" DestinationFolder="./../.git/hooks" />
 </Target>
+  
+ <ItemGroup>
+   <None Remove="LICENSE" />
+ </ItemGroup>
+  
+ <ItemGroup>
+   <Compile Include="LICENSE" />
+ </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />

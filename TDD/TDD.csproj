@@ -4,11 +4,11 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
   
-  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
-    <ItemGroup>
-        <_CustomFiles Include="automation\commit-msg" />
-    </ItemGroup>
-    <Copy SourceFiles="@(_CustomFiles)" DestinationFolder="./../.git/hooks" />
+ <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+	<ItemGroup>
+		<_CustomFiles Include="automation\commit-msg" />
+	</ItemGroup>
+	<Copy SourceFiles="@(_CustomFiles)" DestinationFolder="./../.git/hooks" />
 </Target>
 
   <ItemGroup>
